@@ -1,0 +1,25 @@
+[
+  {
+    "username": "",
+    "icon": "",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10"
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10"
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10"
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10"
+      }
+    ]
+  }
+]
