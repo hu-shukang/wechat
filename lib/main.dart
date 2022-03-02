@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp.router(
+    return GetMaterialApp(
       title: 'WeChat',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      // initialRoute: AppRoute.signIn,
+      initialRoute: AppRoute.signIn,
       getPages: AppPage.pages,
     );
   }

@@ -9,7 +9,7 @@ class UserStore {
 
   static Future signIn(SignInModel model) async {
     String modelString = jsonEncode(model);
-    bool signInState = model.username == '12345' && model.password == '12345';
+    bool signInState = model.username == '123' && model.password == '123';
     await StorageService.instance.setString(_signInKey, modelString);
     await StorageService.instance.setBool(_isSignInKey, signInState);
   }

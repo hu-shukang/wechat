@@ -14,20 +14,14 @@ abstract class AppPage {
       name: AppRoute.signIn,
       page: () => const SignInPage(),
       binding: SignInBindings(),
-      participatesInRootNavigator: true,
-      preventDuplicates: true,
-      children: [
-        GetPage(
-          preventDuplicates: true,
-          name: AppRoute.home,
-          page: () => const HomePage(),
-          binding: HomeBindings(),
-          middlewares: [
-            RouteAuthMiddleware(),
-          ],
-        ),
-      ]
     ),
-
+    GetPage(
+      name: AppRoute.home,
+      page: () => const HomePage(),
+      binding: HomeBindings(),
+      middlewares: [
+        RouteAuthMiddleware(),
+      ],
+    ),
   ];
 }
