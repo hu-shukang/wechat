@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService extends GetxService {
-  static StorageService get instance => Get.find<StorageService>();
+  static StorageService get to => Get.find<StorageService>();
   late final SharedPreferences _prefs;
 
   Future<StorageService> init() async {

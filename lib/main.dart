@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'WeChat',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      initialRoute: AppRoute.signIn,
+      initialRoute: AppRoute.home,
       getPages: AppPage.pages,
     );
   }

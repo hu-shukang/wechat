@@ -9,7 +9,7 @@ class SignInController extends GetxController {
   final TextEditingController password = TextEditingController();
 
   void handleNavSignUp() {
-    Get.rootDelegate.toNamed('/sign_up');
+    Get.toNamed(AppRoute.signUp);
   }
 
   void handleSignIn() async {
@@ -17,9 +17,8 @@ class SignInController extends GetxController {
       username: username.value.text,
       password: password.value.text,
     );
-    await UserStore.signIn(signInModel);
-    Get.rootDelegate.toNamed('/home');
-    // Get.toNamed(AppRoute.home);
+    await UserStore.to.signIn(signInModel);
+    Get.offNamed(AppRoute.home);
   }
 
   @override

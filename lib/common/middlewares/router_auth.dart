@@ -10,19 +10,15 @@ class RouteAuthMiddleware extends GetMiddleware {
 
   @override
   RouteSettings? redirect(String? route) {
-    return super.redirect(route);
+    bool isSignIn = UserStore.to.isSignIn;
+    log.i(isSignIn);
+    if (isSignIn) {
+      return null;
+    }
+    Future.delayed(
+      const Duration(milliseconds: 500),
+      () => Get.snackbar("認証失敗", "ユーザ名・パスワード不正"),
+    );
+    return const RouteSettings(name: AppRoute.signIn);
   }
-
-// @override
-//   Future<GetNavConfig?> redirectDelegate(GetNavConfig route) async {
-//     bool isSignIn = await UserStore.isSignIn();
-//     log.i(isSignIn);
-//     if (!isSignIn) {
-//       Get.snackbar("ログイン失敗", "ユーザ名・パスワード不正");
-//       // return null;
-//       return GetNavConfig.fromRoute(AppRoute.signIn);
-//     }
-//     log.i(route);
-//     return route;
-//   }
 }
