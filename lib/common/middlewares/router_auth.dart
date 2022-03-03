@@ -11,7 +11,6 @@ class RouteAuthMiddleware extends GetMiddleware {
   @override
   RouteSettings? redirect(String? route) {
     bool isSignIn = UserStore.to.isSignIn;
-    log.i(isSignIn);
     if (isSignIn) {
       return null;
     }

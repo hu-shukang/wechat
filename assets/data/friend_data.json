@@ -1,24 +1,210 @@
 [
   {
-    "username": "",
-    "icon": "",
+    "username": "Aさん",
+    "icon": "assets/images/friends/friend_1.jpeg",
     "latestTime": "10:10",
     "messages": [
       {
         "message": "hello!!",
-        "time": "09:10"
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "こんにちは！",
+        "time": "09:10",
+        "read": false
+      }
+    ]
+  },
+  {
+    "username": "Bさん",
+    "icon": "assets/images/friends/friend_2.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": false
       },
       {
         "message": "hello!!",
-        "time": "09:10"
+        "time": "09:10",
+        "read": false
+      },
+      {
+        "message": "おはようございます。",
+        "time": "09:10",
+        "read": false
+      }
+    ]
+  },
+  {
+    "username": "Cさん",
+    "icon": "assets/images/friends/friend_3.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
       },
       {
         "message": "hello!!",
-        "time": "09:10"
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Dさん",
+    "icon": "assets/images/friends/friend_4.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
       },
       {
         "message": "hello!!",
-        "time": "09:10"
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Eさん",
+    "icon": "assets/images/friends/friend_5.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Fさん",
+    "icon": "assets/images/friends/friend_6.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Gさん",
+    "icon": "assets/images/friends/friend_7.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Hさん",
+    "icon": "assets/images/friends/friend_8.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Iさん",
+    "icon": "assets/images/friends/friend_9.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Jさん",
+    "icon": "assets/images/friends/friend_10.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Kさん",
+    "icon": "assets/images/friends/friend_11.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      }
+    ]
+  },
+  {
+    "username": "Lさん",
+    "icon": "assets/images/friends/friend_12.jpeg",
+    "latestTime": "10:10",
+    "messages": [
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
+      },
+      {
+        "message": "hello!!",
+        "time": "09:10",
+        "read": true
       }
     ]
   }

@@ -19,7 +19,7 @@ abstract class AppColor {
   static const Color secondaryColor = Color(0xFFDEE3FF);
 
   /// Border Color
-  static const Color borderColor = Color(0xFFDEE3FF);
+  static const Color borderColor = Color(0xFFEEEEEE);
 
   static const Color unselectedItemColor = Color(0xFFA2A5B9);
 
