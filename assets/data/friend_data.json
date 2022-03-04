@@ -1,5 +1,6 @@
 [
   {
+    "id": "001",
     "username": "Aさん",
     "icon": "assets/images/friends/friend_1.jpeg",
     "latestTime": "10:10",
@@ -17,6 +18,7 @@
     ]
   },
   {
+    "id": "002",
     "username": "Bさん",
     "icon": "assets/images/friends/friend_2.jpeg",
     "latestTime": "10:10",
@@ -39,6 +41,7 @@
     ]
   },
   {
+    "id": "003",
     "username": "Cさん",
     "icon": "assets/images/friends/friend_3.jpeg",
     "latestTime": "10:10",
@@ -56,6 +59,7 @@
     ]
   },
   {
+    "id": "004",
     "username": "Dさん",
     "icon": "assets/images/friends/friend_4.jpeg",
     "latestTime": "10:10",
@@ -73,6 +77,7 @@
     ]
   },
   {
+    "id": "005",
     "username": "Eさん",
     "icon": "assets/images/friends/friend_5.jpeg",
     "latestTime": "10:10",
@@ -90,6 +95,7 @@
     ]
   },
   {
+    "id": "006",
     "username": "Fさん",
     "icon": "assets/images/friends/friend_6.jpeg",
     "latestTime": "10:10",
@@ -107,6 +113,7 @@
     ]
   },
   {
+    "id": "007",
     "username": "Gさん",
     "icon": "assets/images/friends/friend_7.jpeg",
     "latestTime": "10:10",
@@ -124,6 +131,7 @@
     ]
   },
   {
+    "id": "008",
     "username": "Hさん",
     "icon": "assets/images/friends/friend_8.jpeg",
     "latestTime": "10:10",
@@ -141,6 +149,7 @@
     ]
   },
   {
+    "id": "009",
     "username": "Iさん",
     "icon": "assets/images/friends/friend_9.jpeg",
     "latestTime": "10:10",
@@ -158,6 +167,7 @@
     ]
   },
   {
+    "id": "010",
     "username": "Jさん",
     "icon": "assets/images/friends/friend_10.jpeg",
     "latestTime": "10:10",
@@ -175,6 +185,7 @@
     ]
   },
   {
+    "id": "011",
     "username": "Kさん",
     "icon": "assets/images/friends/friend_11.jpeg",
     "latestTime": "10:10",
@@ -192,6 +203,7 @@
     ]
   },
   {
+    "id": "012",
     "username": "Lさん",
     "icon": "assets/images/friends/friend_12.jpeg",
     "latestTime": "10:10",

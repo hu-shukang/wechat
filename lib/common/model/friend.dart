@@ -2,17 +2,20 @@ import 'package:wechat/common/model/message.dart';
 
 class FriendModel {
   FriendModel({
+    required this.id,
     required this.username,
     required this.icon,
     required this.latestTime,
     required this.messages,
   });
+  late final String id;
   late final String username;
   late final String icon;
   late final String latestTime;
   late final List<MessageModel> messages;
 
   FriendModel.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
     username = json['username'];
     icon = json['icon'];
     latestTime = json['latestTime'];
@@ -25,6 +28,7 @@ class FriendModel {
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
+    _data['id'] = id;
     _data['username'] = username;
     _data['icon'] = icon;
     _data['latestTime'] = latestTime;
@@ -34,6 +38,6 @@ class FriendModel {
 
   @override
   String toString() {
-    return 'FriendModel{username: $username, icon: $icon, latestTime: $latestTime, messages: $messages}';
+    return 'FriendModel{id: $id, username: $username, icon: $icon, latestTime: $latestTime, messages: $messages}';
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wechat/common/widgets/appbar.dart';
 import 'package:wechat/pages/chat_list//view.dart';
 import 'package:wechat/pages/home/controller.dart';
 
@@ -53,8 +54,9 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('WeChat'),
+      appBar: appBar(
+        title: 'WeChat',
+        context: context,
       ),
       body: _buildBody(),
       bottomNavigationBar: _buildBottomNavigationBar(),

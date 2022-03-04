@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:wechat/common/middlewares/router_auth.dart';
 import 'package:wechat/common/routes/app_route.dart';
+import 'package:wechat/pages/chat/bindings.dart';
+import 'package:wechat/pages/chat/view.dart';
 import 'package:wechat/pages/home/bindings.dart';
 import 'package:wechat/pages/home/view.dart';
 import 'package:wechat/pages/sign_in/bindings.dart';
@@ -19,6 +21,15 @@ abstract class AppPage {
       name: AppRoute.home,
       page: () => const HomePage(),
       binding: HomeBindings(),
+      middlewares: [
+        RouteAuthMiddleware(),
+      ],
+    ),
+    GetPage(
+      name: AppRoute.chat,
+      page: () => const ChatPage(),
+      binding: ChatBindings(),
+      transition: Transition.rightToLeft,
       middlewares: [
         RouteAuthMiddleware(),
       ],

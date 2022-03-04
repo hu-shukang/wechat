@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:wechat/common/model/friend.dart';
+import 'package:wechat/common/utils/log.dart';
 
 class ChatListController extends GetxController {
 
@@ -19,5 +20,10 @@ class ChatListController extends GetxController {
     var jsonText = await rootBundle.loadString('assets/data/friend_data.json');
     var json = jsonDecode(jsonText);
     _friendList.value = FriendModel.fromJsonList(json);
+  }
+
+  void handleChatItemTap(FriendModel friend) {
+    log.i(friend);
+    Get.toNamed('/chat/${friend.id}');
   }
 }
