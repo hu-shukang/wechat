@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/friends/
+    - assets/images/app/
     - assets/data/
 
   # An images asset can refer to one or more resolution-specific "variants", see

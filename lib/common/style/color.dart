@@ -24,4 +24,15 @@ abstract class AppColor {
   static const Color unselectedItemColor = Color(0xFFA2A5B9);
 
   static const Color labelColor = Colors.black54;
+
+  static const Color appBarBackgroundColor = Color(0xFFEEEEEE);
+
+  /// tabBar 默认颜色 灰色
+  static const Color tabBarElement = Color.fromARGB(255, 208, 208, 208);
+
+  /// tabCellSeparator 单元格底部分隔条 颜色
+  static const Color tabCellSeparator = Color.fromARGB(255, 230, 230, 231);
+
+  /// 第二种控件-文本 浅蓝色
+  static const Color secondaryElementText = Color.fromARGB(255, 41, 103, 255);
 }

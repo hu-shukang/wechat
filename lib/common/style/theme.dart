@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:wechat/common/style/color.dart';
 
 class AppTheme {
@@ -17,7 +18,11 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
       elevation: 0,
       centerTitle: true,
-      backgroundColor: Colors.transparent,
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+      backgroundColor: AppColor.appBarBackgroundColor,
       iconTheme: IconThemeData(
         color: AppColor.primaryText,
       ),
@@ -32,7 +37,7 @@ class AppTheme {
       unselectedLabelStyle: TextStyle(fontSize: 12),
       selectedLabelStyle: TextStyle(fontSize: 12),
       unselectedItemColor: AppColor.unselectedItemColor,
-      selectedItemColor: AppColor.primaryText,
+      selectedItemColor: AppColor.primaryColor,
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: true,
       showUnselectedLabels: true,
