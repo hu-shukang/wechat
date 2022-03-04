@@ -3,9 +3,8 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:wechat/common/model/friend.dart';
-import 'package:wechat/common/utils/log.dart';
 
-class ChatController extends GetxController {
+class ChatListController extends GetxController {
 
   final _friendList = Rx<List<FriendModel>>([]);
   List<FriendModel> get friendList => _friendList.value;

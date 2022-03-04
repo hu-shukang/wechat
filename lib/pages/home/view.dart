@@ -1,12 +1,6 @@
-// ignore_for_file: unnecessary_brace_in_string_interps
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wechat/common/model/friend.dart';
-import 'package:wechat/common/model/message.dart';
-import 'package:wechat/common/style/color.dart';
-import 'package:wechat/common/style/text.dart';
-import 'package:wechat/pages/chat/view.dart';
+import 'package:wechat/pages/chat_list//view.dart';
 import 'package:wechat/pages/home/controller.dart';
 
 class HomePage extends GetView<HomeController> {
@@ -17,7 +11,7 @@ class HomePage extends GetView<HomeController> {
       controller: controller.pageController,
       onPageChanged: controller.handlePageChange,
       children: const [
-        ChatPage(),
+        ChatListPage(),
         Text('CategoryPage'),
         Text('BookmarksPage'),
         Text('AccountPage'),
@@ -27,29 +21,43 @@ class HomePage extends GetView<HomeController> {
 
   BottomNavigationBarItem _buildBottomNavItem(String iconName, String label) {
     return BottomNavigationBarItem(
-      icon: Image.asset('assets/images/app/${iconName}.png', width: 20, height: 20,),
-      activeIcon: Image.asset('assets/images/app/${iconName}_hl.png', width: 20, height: 20,),
+      icon: Image.asset(
+        'assets/images/app/${iconName}.png',
+        width: 20,
+        height: 20,
+      ),
+      activeIcon: Image.asset(
+        'assets/images/app/${iconName}_hl.png',
+        width: 20,
+        height: 20,
+      ),
       label: label,
     );
   }
 
   Widget _buildBottomNavigationBar() {
-    return Obx(() => BottomNavigationBar(items: [
-      _buildBottomNavItem('tabbar_chat', '微信'),
-      _buildBottomNavItem('tabbar_friends', '通信录'),
-      _buildBottomNavItem('tabbar_discover', '发现'),
-      _buildBottomNavItem('tabbar_mine', '我'),
-    ], currentIndex: controller.page, onTap: controller.handleNavBarTap,));
+    return Obx(
+      () => BottomNavigationBar(
+        items: [
+          _buildBottomNavItem('tabbar_chat', '微信'),
+          _buildBottomNavItem('tabbar_friends', '通信录'),
+          _buildBottomNavItem('tabbar_discover', '发现'),
+          _buildBottomNavItem('tabbar_mine', '我'),
+        ],
+        currentIndex: controller.page,
+        onTap: controller.handleNavBarTap,
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('WeChat'),
-        ),
-        body: _buildBody(),
-        bottomNavigationBar: _buildBottomNavigationBar(),
+      appBar: AppBar(
+        title: const Text('WeChat'),
+      ),
+      body: _buildBody(),
+      bottomNavigationBar: _buildBottomNavigationBar(),
     );
   }
 }

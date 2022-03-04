@@ -1,10 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:wechat/common/model/friend.dart';
-import 'package:wechat/common/utils/log.dart';
 
 class HomeController extends GetxController {
   final _page = Rx<int>(0);

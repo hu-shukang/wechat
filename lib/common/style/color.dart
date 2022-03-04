@@ -13,7 +13,7 @@ abstract class AppColor {
   static const Color secondaryText = Color(0xFFB6B6B6);
 
   /// Primary Color
-  static const Color primaryColor = Color.fromARGB(255, 7, 193, 96);
+  static const Color primaryColor = Color.fromARGB(255, 26, 193, 25);
 
   /// Secondary Color
   static const Color secondaryColor = Color(0xFFDEE3FF);

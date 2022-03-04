@@ -4,10 +4,10 @@ import 'package:wechat/common/model/friend.dart';
 import 'package:wechat/common/model/message.dart';
 import 'package:wechat/common/style/color.dart';
 import 'package:wechat/common/style/text.dart';
-import 'package:wechat/pages/chat/controller.dart';
+import 'package:wechat/pages/chat_list/controller.dart';
 
-class ChatPage extends GetView<ChatController> {
-  const ChatPage({Key? key}) : super(key: key);
+class ChatListPage extends GetView<ChatListController> {
+  const ChatListPage({Key? key}) : super(key: key);
 
   Widget _buildMessage(FriendModel m) {
     MessageModel message = m.messages.last;
