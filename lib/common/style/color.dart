@@ -25,7 +25,7 @@ abstract class AppColor {
 
   static const Color labelColor = Colors.black54;
 
-  static const Color appBarBackgroundColor = Color(0xFFEEEEEE);
+  static const Color appBarBackgroundColor = Color(0xFFEDEDED);
 
   /// tabBar 默认颜色 灰色
   static const Color tabBarElement = Color.fromARGB(255, 208, 208, 208);
@@ -40,6 +40,7 @@ abstract class AppColor {
 
   static const Color chatSelfColor = Color(0xFF9be34f);
 
-  static const Color chatBackgroundColor = Color(0xFFEFEFEF);
+  static const Color chatBackgroundColor = Color(0xFFEDEDED);
 
+  static const Color chatBottomBackgroundColor = Color(0xFFEEEEEE);
 }

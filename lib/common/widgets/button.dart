@@ -59,3 +59,18 @@ TextButton linkButton({
     child: Text(label),
   );
 }
+
+Container chatIconButton({
+  required IconData iconData,
+  required VoidCallback onPressed,
+  EdgeInsetsGeometry? margin,
+}) {
+  return Container(
+    width: 30,
+    margin: margin,
+    child: IconButton(
+      onPressed: onPressed,
+      icon: Icon(iconData),
+    ),
+  );
+}

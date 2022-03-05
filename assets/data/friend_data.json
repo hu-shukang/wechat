@@ -26,13 +26,25 @@
     "latestTime": "10:10",
     "messages": [
       {
-        "message": "hello!!",
+        "message": "始めまして",
         "time": "09:10",
         "read": true,
         "self": false
       },
       {
-        "message": "おはようございます。",
+        "message": "始めまして",
+        "time": "09:10",
+        "read": true,
+        "self": true
+      },
+      {
+        "message": "Bと申します。これからよろしくお願いいたします。",
+        "time": "09:10",
+        "read": true,
+        "self": false
+      },
+      {
+        "message": "XXと申します。こちらこそよろしくお願いいたします。",
         "time": "09:10",
         "read": true,
         "self": true
@@ -40,14 +52,62 @@
       {
         "message": "お疲れ様です。",
         "time": "09:10",
-        "read": false,
+        "read": true,
         "self": false
       },
       {
-        "message": "お疲れ様です。お疲れ様です。お疲れ様です。お疲れ様です。お疲れ様です。",
+        "message": "お疲れ様です。",
         "time": "09:10",
-        "read": false,
+        "read": true,
+        "self": true
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
         "self": false
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
+        "self": true
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
+        "self": false
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
+        "self": true
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
+        "self": false
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
+        "self": true
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
+        "self": false
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": true,
+        "self": true
       }
     ]
   },

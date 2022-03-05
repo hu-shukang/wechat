@@ -67,23 +67,30 @@ Widget inputTextEditWithLabel({
         ),
       ],
     ),
-    // child: TextField(
-    //   autofocus: autoFocus,
-    //   controller: controller,
-    //   keyboardType: keyboardType,
-    //   decoration: InputDecoration(
-    //     hintText: hitText,
-    //     contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-    //     border: InputBorder.none,
-    //   ),
-    //   style: const TextStyle(
-    //     color: AppColor.primaryText,
-    //     fontWeight: FontWeight.w400,
-    //     fontSize: 18,
-    //   ),
-    //   maxLines: 1,
-    //   autocorrect: false,
-    //   obscureText: isPassword,
-    // ),
+  );
+}
+
+Widget chatTextField({
+  required TextEditingController controller,
+}) {
+  return Container(
+    decoration: const BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.all(
+        Radius.circular(6),
+      ),
+    ),
+    padding: const EdgeInsets.all(6),
+    margin: const EdgeInsets.only(top: 8, bottom: 8),
+    child: TextField(
+      controller: controller,
+      decoration: const InputDecoration(
+        isDense: true,
+        border: InputBorder.none,
+        contentPadding: EdgeInsets.all(0),
+      ),
+      keyboardType: TextInputType.multiline,
+      maxLines: null,
+    ),
   );
 }

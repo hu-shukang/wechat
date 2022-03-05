@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:wechat/common/model/friend.dart';
@@ -7,6 +8,8 @@ import 'package:wechat/common/model/friend.dart';
 class ChatController extends GetxController {
   final _friend = Rx<FriendModel?>(null);
   FriendModel? get friend => _friend.value;
+
+  final messageController = TextEditingController();
 
   @override
   void onInit() {
@@ -20,5 +23,11 @@ class ChatController extends GetxController {
     var json = jsonDecode(jsonText);
     List<FriendModel> friendList = FriendModel.fromJsonList(json);
     _friend.value = friendList.firstWhere((element) => element.id == id);
+  }
+
+  @override
+  void dispose() {
+    messageController.dispose();
+    super.dispose();
   }
 }
