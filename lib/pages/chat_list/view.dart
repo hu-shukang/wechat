@@ -4,12 +4,13 @@ import 'package:wechat/common/model/friend.dart';
 import 'package:wechat/common/model/message.dart';
 import 'package:wechat/common/style/color.dart';
 import 'package:wechat/common/style/text.dart';
+import 'package:wechat/common/widgets/avatar.dart';
 import 'package:wechat/pages/chat_list/controller.dart';
 
 class ChatListPage extends GetView<ChatListController> {
   const ChatListPage({Key? key}) : super(key: key);
 
-  Widget _buildMessage(FriendModel m) {
+  Widget _buildMessage(FriendModel m, BuildContext context) {
     MessageModel message = m.messages.last;
     double paddingValue = 5.0;
     double rowHeight = 50.0;
@@ -32,48 +33,7 @@ class ChatListPage extends GetView<ChatListController> {
             ),
             child: Row(
               children: [
-                SizedBox(
-                  height: totalHeight,
-                  width: totalHeight,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        top: 5,
-                        right: 5,
-                        child: Image.asset(
-                          m.icon,
-                          fit: BoxFit.cover,
-                          height: rowHeight,
-                          width: rowHeight,
-                        ),
-                      ),
-                      unreadCount > 0
-                          ? Positioned(
-                              child: Container(
-                                child: Text(
-                                  unreadCount.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                                alignment: const Alignment(0, 0),
-                                height: 16,
-                                width: 16,
-                                decoration: const BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(8),
-                                  ),
-                                ),
-                              ),
-                              top: 3,
-                              right: 0,
-                            )
-                          : Container(),
-                    ],
-                  ),
-                ),
+                avatar(size: totalHeight, src: m.icon, tip: unreadCount > 0 ? unreadCount.toString() : null),
                 Expanded(
                   child: Container(
                     padding: EdgeInsets.all(paddingValue),
@@ -96,9 +56,17 @@ class ChatListPage extends GetView<ChatListController> {
                             )
                           ],
                         ),
-                        Text(
-                          message.message,
-                          style: messageTextStyle(),
+                        Row(
+                          children: [
+                            LimitedBox(
+                              maxWidth: MediaQuery.of(context).size.width - 150,
+                              child: Text(
+                                message.message,
+                                style: messageTextStyle(),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            )
+                          ],
                         ),
                       ],
                     ),
@@ -110,18 +78,18 @@ class ChatListPage extends GetView<ChatListController> {
         ));
   }
 
-  Widget _buildMessageList() {
+  Widget _buildMessageList(BuildContext context) {
     return Obx(() => controller.friendList.isEmpty
         ? Container()
         : Column(
-            children: controller.friendList.map((FriendModel m) => _buildMessage(m)).toList(),
+            children: controller.friendList.map((FriendModel m) => _buildMessage(m, context)).toList(),
           ));
   }
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: _buildMessageList(),
+      child: _buildMessageList(context),
     );
   }
 }

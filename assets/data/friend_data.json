@@ -8,12 +8,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "こんにちは！",
         "time": "09:10",
-        "read": false
+        "read": false,
+        "self": false
       }
     ]
   },
@@ -26,17 +28,26 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": false
-      },
-      {
-        "message": "hello!!",
-        "time": "09:10",
-        "read": false
+        "read": true,
+        "self": false
       },
       {
         "message": "おはようございます。",
         "time": "09:10",
-        "read": false
+        "read": true,
+        "self": true
+      },
+      {
+        "message": "お疲れ様です。",
+        "time": "09:10",
+        "read": false,
+        "self": false
+      },
+      {
+        "message": "お疲れ様です。お疲れ様です。お疲れ様です。お疲れ様です。お疲れ様です。",
+        "time": "09:10",
+        "read": false,
+        "self": false
       }
     ]
   },
@@ -49,12 +60,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -67,12 +80,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -85,12 +100,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -103,12 +120,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -121,12 +140,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -139,12 +160,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -157,12 +180,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -175,12 +200,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -193,12 +220,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   },
@@ -211,12 +240,14 @@
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       },
       {
         "message": "hello!!",
         "time": "09:10",
-        "read": true
+        "read": true,
+        "self": false
       }
     ]
   }

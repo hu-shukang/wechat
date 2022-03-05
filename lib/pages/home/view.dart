@@ -55,7 +55,7 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(
-        title: 'WeChat',
+        title: const Text('WeChat'),
         context: context,
       ),
       body: _buildBody(),

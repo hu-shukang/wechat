@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:wechat/common/utils/log.dart';
 
 AppBar appBar({
-  required String title,
+  required Widget title,
   required BuildContext context,
   Widget? leading,
   List<Widget>? actions,
@@ -30,7 +30,7 @@ AppBar appBar({
   }
 
   return AppBar(
-    title: Text(title),
+    title: title,
     automaticallyImplyLeading: false,
     leading: leadingWidget,
     actions: actions,

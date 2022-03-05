@@ -35,4 +35,11 @@ abstract class AppColor {
 
   /// 第二种控件-文本 浅蓝色
   static const Color secondaryElementText = Color.fromARGB(255, 41, 103, 255);
+
+  static const Color chatFriendColor = Colors.white;
+
+  static const Color chatSelfColor = Color(0xFF9be34f);
+
+  static const Color chatBackgroundColor = Color(0xFFEFEFEF);
+
 }

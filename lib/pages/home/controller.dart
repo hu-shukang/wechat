@@ -14,7 +14,7 @@ class HomeController extends GetxController {
   void handleNavBarTap(int index) {
     pageController.animateToPage(
       index,
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 20),
       curve: Curves.ease,
     );
   }
