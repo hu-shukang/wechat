@@ -15,8 +15,6 @@ AppBar appBar({
   if (canPop) {
     leadingWidget = IconButton(
       onPressed: () {
-        log.i(Get.previousRoute);
-        log.i(Get.currentRoute);
         Get.back();
       },
       icon: const Icon(

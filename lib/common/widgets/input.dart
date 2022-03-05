@@ -72,6 +72,7 @@ Widget inputTextEditWithLabel({
 
 Widget chatTextField({
   required TextEditingController controller,
+  FocusNode? focusNode,
 }) {
   return Container(
     decoration: const BoxDecoration(
@@ -89,6 +90,7 @@ Widget chatTextField({
         border: InputBorder.none,
         contentPadding: EdgeInsets.all(0),
       ),
+      focusNode: focusNode,
       keyboardType: TextInputType.multiline,
       maxLines: null,
     ),

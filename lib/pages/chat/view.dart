@@ -50,6 +50,7 @@ class ChatPage extends GetView<ChatController> {
       () => controller.friend == null
           ? Container()
           : ListView.builder(
+              controller: controller.scrollController,
               itemCount: controller.friend!.messages.length,
               itemBuilder: (BuildContext ctx, int index) {
                 return _buildItem(controller.friend!, index, context);
@@ -76,10 +77,12 @@ class ChatPage extends GetView<ChatController> {
           Container(
             decoration: const BoxDecoration(
               color: AppColor.chatBottomBackgroundColor,
-              border: Border(top: BorderSide(
-                width: 1,
-                color: Color(0xFFDBDBDB),
-              ),),
+              border: Border(
+                top: BorderSide(
+                  width: 1,
+                  color: Color(0xFFDBDBDB),
+                ),
+              ),
             ),
             child: ConstrainedBox(
               constraints: const BoxConstraints(
@@ -89,14 +92,26 @@ class ChatPage extends GetView<ChatController> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  chatIconButton(iconData: Icons.mic_sharp, onPressed: (){}, margin: const EdgeInsets.only(right: 8),),
+                  chatIconButton(
+                    iconData: Icons.mic_sharp,
+                    onPressed: controller.handleSpeakBtnClick,
+                    margin: const EdgeInsets.only(right: 8),
+                  ),
                   Expanded(
                     child: chatTextField(
-                        controller: controller.messageController
+                      controller: controller.messageController,
+                      focusNode: controller.messageFocus,
                     ),
                   ),
-                  chatIconButton(iconData: Icons.mood_outlined, onPressed: (){}),
-                  chatIconButton(iconData: Icons.add_circle_outline, onPressed: (){}, margin: const EdgeInsets.only(right: 8),),
+                  chatIconButton(
+                    iconData: Icons.mood_outlined,
+                    onPressed: controller.handleEmojiBtnClick,
+                  ),
+                  chatIconButton(
+                    iconData: Icons.add_circle_outline,
+                    onPressed: controller.handlePlusBtnClick,
+                    margin: const EdgeInsets.only(right: 8),
+                  ),
                 ],
               ),
             ),

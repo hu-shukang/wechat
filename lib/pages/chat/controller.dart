@@ -1,20 +1,24 @@
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:wechat/common/model/friend.dart';
+import 'package:wechat/common/utils/log.dart';
 
 class ChatController extends GetxController {
   final _friend = Rx<FriendModel?>(null);
   FriendModel? get friend => _friend.value;
 
   final messageController = TextEditingController();
+  final scrollController = ScrollController();
+  final messageFocus = FocusNode();
 
   @override
   void onInit() {
     super.onInit();
     _readFriendData();
+    messageFocus.addListener(_onMessageFocusChange);
   }
 
   void _readFriendData() async {
@@ -25,8 +29,38 @@ class ChatController extends GetxController {
     _friend.value = friendList.firstWhere((element) => element.id == id);
   }
 
+  void _onMessageFocusChange() {
+    if (messageFocus.hasFocus) {
+      scrollToBottom();
+    }
+  }
+
+  void handleSpeakBtnClick() {
+    log.i('handleSpeakBtnClick');
+  }
+
+  void handleEmojiBtnClick() {
+    log.i('handleEmojiBtnClick');
+  }
+
+  void handlePlusBtnClick() {
+    log.i('handlePlusBtnClick');
+  }
+
+  void scrollToBottom() {
+    if (scrollController.positions.isNotEmpty) {
+      scrollController.animateTo(
+        scrollController.position.maxScrollExtent,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
+    }
+  }
+
   @override
   void dispose() {
+    messageFocus.dispose();
+    scrollController.dispose();
     messageController.dispose();
     super.dispose();
   }
