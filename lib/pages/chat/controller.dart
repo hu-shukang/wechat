@@ -5,13 +5,13 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:wechat/common/model/friend.dart';
 import 'package:wechat/common/utils/log.dart';
+import 'package:wechat/pages/chat/message_list/controller.dart';
 
 class ChatController extends GetxController {
   final _friend = Rx<FriendModel?>(null);
   FriendModel? get friend => _friend.value;
 
   final messageController = TextEditingController();
-  final scrollController = ScrollController();
   final messageFocus = FocusNode();
 
   @override
@@ -31,7 +31,8 @@ class ChatController extends GetxController {
 
   void _onMessageFocusChange() {
     if (messageFocus.hasFocus) {
-      scrollToBottom();
+      MessageListController mlc = Get.find<MessageListController>();
+      mlc.scrollToBottom();
     }
   }
 
@@ -47,20 +48,10 @@ class ChatController extends GetxController {
     log.i('handlePlusBtnClick');
   }
 
-  void scrollToBottom() {
-    if (scrollController.positions.isNotEmpty) {
-      scrollController.animateTo(
-        scrollController.position.maxScrollExtent,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
 
   @override
   void dispose() {
     messageFocus.dispose();
-    scrollController.dispose();
     messageController.dispose();
     super.dispose();
   }
