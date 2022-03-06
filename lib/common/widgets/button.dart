@@ -74,30 +74,3 @@ Container chatIconButton({
     ),
   );
 }
-
-Widget chatSubmitButton({
-  required VoidCallback onPressed,
-  EdgeInsetsGeometry? margin,
-}) {
-  return Container(
-    margin: margin,
-    child: MaterialButton(
-      minWidth: 50,
-      height: 30,
-      color: AppColor.primaryColor,
-      textColor: Colors.white,
-      padding: EdgeInsets.zero,
-      elevation: 0,
-      hoverElevation: 0,
-      focusElevation: 0,
-      highlightElevation: 0,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(8),
-        ),
-      ),
-      onPressed: onPressed,
-      child: const Text('送信'),
-    ),
-  );
-}
