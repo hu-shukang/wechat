@@ -46,10 +46,11 @@ class ChatController extends GetxController {
   void submitMessage() {
     if (_friend.value != null) {
       log.i('submitMessage OK');
-      String msg = messageController.value.text;
+      String msg = messageController.text;
       MessageModel mm = MessageModel(message: msg, time: 'now', read: true, self: true);
       _friend.value!.messages.add(mm);
       update(['message_list']);
+      messageController.text = '';
     }
   }
 

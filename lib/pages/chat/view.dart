@@ -68,15 +68,6 @@ class ChatPage extends GetView<ChatController> {
         }
       },
     );
-    // return Obx(() => controller.friend == null ? Container() : FlutterListView(
-    //   delegate: FlutterListViewDelegate(
-    //         (BuildContext ctx, int index) {
-    //       return _buildItem(index, ctx);
-    //     },
-    //     childCount: controller.friend!.messages.length,
-    //     initIndex: controller.friend!.messages.length - 1,
-    //   ),
-    // ));
   }
 
   @override
